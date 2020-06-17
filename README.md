@@ -63,6 +63,9 @@ class Example extends React.Component {
 ## Todo
 - Make *upload* work with SharePoint
 
+## Credits
+A great thank you to SunEditor's creator and active maintainer, [JiHong88](https://www.github.com/JiHong88).
+
 ## License
 
 MIT © [Salah](https://github.com/Salah)
