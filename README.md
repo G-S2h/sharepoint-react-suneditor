@@ -34,30 +34,20 @@ class Example extends React.Component {
 
 Default SunEditor options can be passed through *sunEditorOptions* prop.
 
-## Example
-
 ```jsx
-import React from 'react'
-
-import { SPSunEditor } from 'sharepoint-react-suneditor';
-import 'suneditor/dist/css/suneditor.min.css';
-
-class Example extends React.Component {
-  _onChange(contents, suneditorCore) {
-    console.log('SunEditor contents:', contents);
-  }
-  
-  render() {
-    return <SPSunEditor sunEditorOptions={{
-        height: 220, 
-        width: 512, 
-        buttonList: [ ['bold', 'underline', 'italic'], ['list'], ['link'], ['image'] ], 
-      }} 
-      onChange={this._onChange.bind(this)} 
-    />
-  }
-}
+<SPSunEditor sunEditorOptions={{
+    height: 220, 
+    width: 512, 
+    buttonList: [ ['bold', 'underline', 'italic'], ['list'], ['link'], ['image'] ], 
+  }} 
+  onChange={this._onChange.bind(this)} 
+/>
 ```
+
+## Run an example
+1. Clone this repository, 
+2. run `npm install`, 
+3. run `npm start` both in root and example folders.
 
 
 ## Todo
