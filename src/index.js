@@ -17,8 +17,19 @@ export class SPSunEditor extends React.Component {
     this.suneditorTextareaId = this.props.textareaId || 'suneditor-textarea-'+ Math.floor(Math.random() * 999);
   }
   
+  appendCustomPlugins() {
+    if(this.props.customPlugins && this.props.customPlugins.length) {
+      this.props.customPlugins.forEach((customPlugin) => {
+        plugins[customPlugin.name] = customPlugin;
+      });
+    }
+    return plugins;
+  }
+  
   componentDidMount() {
     var langCode = this.props && this.props.sunEditorOptions.lang ? lang[this.props.sunEditorOptions.lang] : lang.en;
+    this.appendCustomPlugins();
+    
     this.editor = suneditor.create(this.suneditorTextareaId, {...this.props.sunEditorOptions, plugins: plugins, lang:  langCode});
     
     this.editor.onChange = this.props.onChange;
@@ -47,6 +58,7 @@ SPSunEditor.propTypes = {
   textareaId: PropTypes.string, 
   setContents: PropTypes.string, 
   sunEditorOptions: PropTypes.object, 
+  customPlugins: PropTypes.array, 
 }
 
 

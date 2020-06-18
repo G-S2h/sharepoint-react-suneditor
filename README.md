@@ -32,7 +32,7 @@ class Example extends React.Component {
 }
 ```
 
-Default SunEditor options can be passed through *sunEditorOptions* prop.
+Default SunEditor options can be passed through *sunEditorOptions* prop. However, some options such as *plugins* and *lang* have their own prop (See below, Props).
 
 ```jsx
 <SPSunEditor sunEditorOptions={{
@@ -43,6 +43,16 @@ Default SunEditor options can be passed through *sunEditorOptions* prop.
   onChange={this._onChange.bind(this)} 
 />
 ```
+
+## Props
+**_sunEditorOptions_** : SunEditor native options
+Those are the native options that come with SunEditor.
+
+**_customPlugins_** : Add your custom plugins
+An array of [custom plugins](http://suneditor.com/sample/html/customPlugins.html).
+
+**_lang_** : Define language
+Takes a language code (en, de, fr...).
 
 ## Run an example
 1. Clone this repository, 

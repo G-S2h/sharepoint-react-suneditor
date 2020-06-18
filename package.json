@@ -5,7 +5,7 @@
   "keywords": ["sharepoint", "suneditor", "spfx", "wysiwyg"],
   "author": "Salah",
   "license": "MIT",
-  "repository": "Salah/sharepoint-react-suneditor",
+  "repository": "G-S2h/sharepoint-react-suneditor",
   "main": "dist/main.js",
   "module": "dist/main.js",
   "source": "src/index.js",
